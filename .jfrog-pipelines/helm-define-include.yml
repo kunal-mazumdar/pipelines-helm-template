@@ -1,0 +1,28 @@
+{{- define "pipe.additionalEnvs" -}}
+  env3: additional
+{{ end -}}
+
+valuesFilePath: values.yml
+
+resources:
+  - name: myFirstRepo
+    type: GitRepo
+    configuration:
+      gitProvider: mygithub
+      path: sourceRepository
+      branches:
+        include: {{ .Values.gitBranch }}
+
+pipelines:
+  - name: P1
+    steps:
+      - name: S1
+        type: Bash
+        configuration:
+          environmentVariables:
+            env1: gitBranch
+            env2: sourceRepository
+            {{ include "pipe.additionalEnvs" . }}
+        execution:
+          onExecute:
+            - echo test

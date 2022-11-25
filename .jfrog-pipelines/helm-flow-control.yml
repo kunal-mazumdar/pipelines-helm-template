@@ -1,0 +1,25 @@
+valuesFilePath: values.yml
+resources:
+  - name: myFirstRepo
+    type: GitRepo
+    configuration:
+      gitProvider: mygithub
+      path: sourceRepository
+      branches:
+        include: {{ .Values.gitBranch }}
+
+pipelines:
+{{ if eq .Values.gitBranch "test" }}
+  - name: P2
+    steps:
+      - name: S2
+        type: Bash
+        configuration:
+          environmentVariables:
+            env1: gitBranch
+            env2: sourceRepository
+
+        execution:
+          onExecute:
+            - echo test
+{{ end }}

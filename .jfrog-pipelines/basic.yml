@@ -10,9 +10,9 @@ resources:
         include: {{ .Values.gitBranch }}
 
 pipelines:
-  - name: P1
+  - name: P_basic
     steps:
-      - name: S1
+      - name: S_basic
         type: Bash
         configuration:
           environmentVariables:

@@ -1,17 +1,9 @@
 valuesFilePath: values.yml
-resources:
-  - name: myFirstRepo
-    type: GitRepo
-    configuration:
-      gitProvider: mygithub
-      path: sourceRepository
-      branches:
-        include: {{ .Values.gitBranch }}
 
 pipelines:
-  - name: P1
+  - name: P_files
     steps:
-      - name: S1
+      - name: S_files
         type: Bash
         configuration:
           environmentVariables:

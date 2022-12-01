@@ -1,18 +1,10 @@
 valuesFilePath: values.yml
-resources:
-  - name: myFirstRepo
-    type: GitRepo
-    configuration:
-      gitProvider: mygithub
-      path: sourceRepository
-      branches:
-        include: {{ .Values.gitBranch }}
 
 pipelines:
 {{ if eq .Values.gitBranch "test" }}
-  - name: P2
+  - name: P_flow
     steps:
-      - name: S2
+      - name: S_flow
         type: Bash
         configuration:
           environmentVariables:

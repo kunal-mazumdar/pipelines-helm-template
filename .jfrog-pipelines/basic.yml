@@ -20,4 +20,4 @@ pipelines:
             env2: sourceRepository
         execution:
           onExecute:
-            - echo {{ .Values.gitBranch | quote }}
+            - echo {{ .Values.repoBranch | quote }}

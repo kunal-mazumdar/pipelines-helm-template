@@ -1,2 +1,2 @@
-gitBranch: test
-templateAsVariable: "Updated branch name: feature/{{ .Values.gitBranch }}"
+repoBranch: test
+templateAsVariable: "Updated branch name: feature/{{ .Values.repoBranch }}"

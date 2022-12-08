@@ -3,7 +3,7 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: mygithub
-      path: kunal-mazumdar/pipelines-helm-template
+      path: {{ .Values.repoName }}
       branches:
         include: master
 
@@ -18,4 +18,4 @@ pipelines:
             env2: sourceRepository
         execution:
           onExecute:
-            - echo master
+            - echo {{ .Values.repoName }}

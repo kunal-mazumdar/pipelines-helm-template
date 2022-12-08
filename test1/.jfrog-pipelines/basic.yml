@@ -3,7 +3,7 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: mygithub
-      path: sourceRepository
+      path: kunal-mazumdar/pipelines-helm-template
       branches:
         include: master
 

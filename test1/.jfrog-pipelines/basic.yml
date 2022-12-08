@@ -1,3 +1,5 @@
+valuesFilePath: ./values.yml
+
 resources:
   - name: myFirstRepo
     type: GitRepo

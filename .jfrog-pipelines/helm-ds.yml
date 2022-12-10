@@ -11,5 +11,5 @@ pipelines:
             env2: sourceRepository
         execution:
           onExecute:
-            - {{ $myDict := dict "name1" "value1" "name2" "value2" "name3" "value 3" }}
+            {{ $myDict := dict "name1" "value1" "name2" "value2" "name3" "value 3" }}
             - echo {{ get $myDict "name1" }}

@@ -1,7 +1,7 @@
 valuesFilePath: values.yml
 
 pipelines:
-{{ if eq "master" .Values.repoBranch }}
+{{ if eq "master" (.Values.repoBranch | toString) }}
   - name: P_flow
     steps:
       - name: S_flow

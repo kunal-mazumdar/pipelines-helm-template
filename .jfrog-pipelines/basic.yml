@@ -5,7 +5,7 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: mygithub
-      path: sourceRepository
+      path: {{ .Values.repoName }}
       branches:
         include: {{ .Values.repoBranch }}
 

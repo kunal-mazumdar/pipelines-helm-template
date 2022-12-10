@@ -11,4 +11,4 @@ pipelines:
 
         execution:
           onExecute:
-            - {{ tpl .Values.templateAsVariable . }}
+            - {{ tpl (toYaml .Values.repoName) . | indent 2 }}

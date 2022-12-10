@@ -1,2 +1,2 @@
-repoBranch: test
-templateAsVariable: "Updated branch name: feature/{{ .Values.repoBranch }}"
+repoName: kunal-mazumdar/pipelines-helm-template
+repoBranch: master

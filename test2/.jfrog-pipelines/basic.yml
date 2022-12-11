@@ -1,0 +1,13 @@
+valuesFilePath: ./values.yml
+
+pipelines:
+  - name: P_basic
+    steps:
+      - name: S_basic
+        type: Bash
+        configuration:
+          environmentVariables:
+            {{ tpl (.Files.Get "conf/app.conf") . }}
+        execution:
+          onExecute:
+            - echo test

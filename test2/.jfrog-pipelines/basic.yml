@@ -7,7 +7,7 @@ pipelines:
         type: Bash
         configuration:
           environmentVariables:
-            {{ tpl (.Files.Get "conf/app.conf") . }}
+            {{ tpl (.Files.Get "app.conf") . }}
         execution:
           onExecute:
             - echo test

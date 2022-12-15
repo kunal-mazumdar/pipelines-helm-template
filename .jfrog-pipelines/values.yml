@@ -1,6 +1,7 @@
 repoName: kunal-mazumdar/pipelines-helm-template
 repoBranch: master
+http: http
 environmentVariables:
-  local: "localhost"
-  stg: "stg.jfrog.com"
-  prod: "jfrog.com"
+  local: "{{ .Values.http}}//localhost:8080"
+  stg: "{{ .Values.http}}s//stg.jfrog.com"
+  prod: "{{ .Values.http}}s//jfrog.com"

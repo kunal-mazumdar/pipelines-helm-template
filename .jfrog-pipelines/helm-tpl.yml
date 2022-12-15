@@ -7,9 +7,8 @@ pipelines:
         type: Bash
         configuration:
           environmentVariables:
-            env: test
             {{- range $k, $v := .Values.environmentVariables }}
-            {{ $k }}: {{ $v }}
+            {{ $k }}: {{ tpl(toYaml $v .) }}
             {{- end }}
 
         execution:

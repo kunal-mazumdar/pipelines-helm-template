@@ -11,4 +11,4 @@ pipelines:
 
         execution:
           onExecute:
-            - echo {{ tpl (toYaml .Values.repoName) . | indent 2 | quote }}
+            - echo {{ tpl (toYaml .Values.repoName) . | quote }}

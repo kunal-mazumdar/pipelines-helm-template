@@ -7,9 +7,9 @@ pipelines:
         type: Bash
         configuration:
           environmentVariables:
-          {{range $k, $v := .Values.environmentVariables }}
-            {{ . | toYaml | indent 2 | trim }}
-          {{end }}
+          {{- range $k, $v := .Values.environmentVariables }}
+            - {{ . | toYaml | indent 2 | trim }}
+          {{- end }}
 
         execution:
           onExecute:

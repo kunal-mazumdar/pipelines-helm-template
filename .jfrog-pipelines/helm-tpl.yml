@@ -9,7 +9,7 @@ pipelines:
           environmentVariables:
             env: test
             {{- range $k, $v := .Values.environmentVariables }}
-              - {{ . | toYaml | indent 2 | trim }}
+            {{ $k }}: {{ $v }}
             {{- end }}
 
         execution:

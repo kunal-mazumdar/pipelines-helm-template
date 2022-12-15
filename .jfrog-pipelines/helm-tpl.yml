@@ -8,7 +8,7 @@ pipelines:
         configuration:
           environmentVariables:
             {{- range $k, $v := .Values.environmentVariables }}
-            {{ $k }}: {{ $v }}
+            {{ $k }}: {{ tpl (toYaml .Values.environmentVariables.$v) . }}
             {{- end }}
 
         execution:

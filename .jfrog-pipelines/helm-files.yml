@@ -14,4 +14,3 @@ pipelines:
             - echo {{ .Files.Get "config.toml" }}
             - echo {{ .Files.Get "config.txt" }}
             - echo {{ get (.Files.Get "config.json" | fromJson) "message" }}
-            - echo {{ get (.Files.Get "conf/config1.json" | fromJson) "message" }}

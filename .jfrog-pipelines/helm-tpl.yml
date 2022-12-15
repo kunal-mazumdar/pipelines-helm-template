@@ -7,7 +7,7 @@ pipelines:
         type: Bash
         configuration:
           environmentVariables:
-            env1: gitBranch
+          {{ tpl (toYaml .Values.environmentVariables) . | indent 2 }}
 
         execution:
           onExecute:

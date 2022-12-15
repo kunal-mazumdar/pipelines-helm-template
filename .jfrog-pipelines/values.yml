@@ -1,2 +1,6 @@
 repoName: kunal-mazumdar/pipelines-helm-template
 repoBranch: master
+environmentVariables:
+  local: "localhost"
+  stg: "stg.jfrog.com"
+  prod: "jfrog.com"

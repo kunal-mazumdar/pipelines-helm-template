@@ -1,7 +1,7 @@
 pipelines:
-  - name: P_files
+  - name: P_files_1
     steps:
-      - name: S_files
+      - name: S_files_1
         type: Bash
         configuration:
           environmentVariables:

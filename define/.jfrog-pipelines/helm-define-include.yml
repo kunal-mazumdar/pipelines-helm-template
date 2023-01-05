@@ -1,0 +1,20 @@
+{{- define "pipe.additionalEnvs" -}}
+  env3: additional
+{{ end -}}
+
+valuesFilePath: values.yml
+
+pipelines:
+  - name: P_define_x
+    steps:
+      - name: S_define_x
+        type: Bash
+        configuration:
+          environmentVariables:
+            env1: gitBranch
+            env2: sourceRepository
+            {{ include "pipe.additionalEnvs" . }}
+            sanityName: {{ include "sanity.name" . }}
+        execution:
+          onExecute:
+            - echo test

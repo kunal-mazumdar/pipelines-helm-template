@@ -2,8 +2,6 @@
   env3: additional
 {{ end -}}
 
-valuesFilePath: values.yml
-
 pipelines:
   - name: P_define_x
     steps:

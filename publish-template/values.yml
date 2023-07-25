@@ -1,0 +1,37 @@
+templateRepository:
+  # scm integration name
+  gitProvider: kunal_gh
+
+  # repository path where your templates are present
+  path: kunal-mazumdar/pipelines-helm-template
+
+  # branch name or pattern where your templates are present in the repository (optional)
+  branch: master
+
+  # template folder location, where your templateDefinition.yml file is present
+  templateFolder: template
+
+  # when set to true and branch is also defined, then auto triggers the publish pipeline upon commit. (optional)
+  autoPublishOnTemplateChange: false
+ 
+publishTemplate:
+  # Template namespace
+  namespace: kunal
+
+  # Template name
+  name: HelmTest
+
+  # Template version
+  version: 1.0.0
+
+  # name of the pipeline (optional)
+  pipelineName: HelmPublishTemplate
+
+  # template repository resource name (optional)
+  templateRepositoryResourceName: helmTemplateRepository
+
+  # upload status resource name (optional)
+  templateUploadStatusResourceName: helmTemplateUploadStatus
+
+  # JFrog platform access token integration name
+  jfrogAccessTokenIntegration: jf_token

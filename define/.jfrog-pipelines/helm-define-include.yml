@@ -14,7 +14,7 @@ pipelines:
             env1: gitBranch
             env2: sourceRepository
             {{ include "pipe.additionalEnvs" . }}
-            sanityName: {{ include "sanity.name" . }}
+            sanityName: {{ include "sanity-name" . }}
             sanityName1: {{ include "sanity.name1" . }}
         execution:
           onExecute:

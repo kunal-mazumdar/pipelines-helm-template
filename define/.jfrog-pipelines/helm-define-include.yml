@@ -5,7 +5,7 @@
 valuesFilePath: values.yml
 
 pipelines:
-  - name: P_define_x
+  - name: P_{{ include "sanity-name" . }}
     steps:
       - name: S_define_x
         type: Bash

@@ -6,7 +6,7 @@ templateRepository:
   path: kunal-mazumdar/pipelines-helm-template
 
   # branch name or pattern where your templates are present in the repository (optional)
-  branch: master
+  branch: aiola
 
   # template folder location, where your templateDefinition.yml file is present
   templateFolder: template

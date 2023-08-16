@@ -1,6 +1,6 @@
 {{- define "pipeline.execution" }}
-    {{ if .execution }}
-    execution:      
+{{ if .execution }}
+execution:      
     {{ if .execution.onStart }}
     onStart:
         {{ range $key, $execute := .execution.onStart }}
@@ -25,5 +25,5 @@
         - {{ . }}
         {{- end }}
     {{- end }}        
-    {{- end }}  
+{{- end }}  
 {{- end }}

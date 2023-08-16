@@ -1,9 +1,9 @@
 execution:
-    onStart:
-        - echo test
-    onExecute:
-        - echo test
-    onSuccess:
-        - echo test
-    onFailure:
-        - echo test
+  onStart:
+    - echo test
+  onExecute:
+    - echo test
+  onSuccess:
+    - echo test
+  onFailure:
+    - echo test

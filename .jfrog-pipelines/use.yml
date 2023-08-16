@@ -1,3 +1,0 @@
-valuesFilePath: values.yml
-include:
-  template: kunal/AiolaHelmTest/1.0.0

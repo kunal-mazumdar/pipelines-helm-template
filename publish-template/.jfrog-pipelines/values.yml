@@ -19,19 +19,19 @@ publishTemplate:
   namespace: kunal
 
   # Template name
-  name: HelmTest
+  name: AiolaHelmTest
 
   # Template version
   version: 1.0.0
 
   # name of the pipeline (optional)
-  pipelineName: HelmPublishTemplate
+  pipelineName: AiolaHelmPublishTemplate
 
   # template repository resource name (optional)
-  templateRepositoryResourceName: helmTemplateRepository
+  templateRepositoryResourceName: AiolaHelmTemplateRepository
 
   # upload status resource name (optional)
-  templateUploadStatusResourceName: helmTemplateUploadStatus
+  templateUploadStatusResourceName: AiolaHelmTemplateUploadStatus
 
   # JFrog platform access token integration name
   jfrogAccessTokenIntegration: jf_token

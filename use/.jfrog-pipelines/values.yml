@@ -1,0 +1,7 @@
+repoName: kunal-mazumdar/pipelines-helm-template
+repoBranch: master
+http: http
+environmentVariables:
+  local: "localhost:8080"
+  stg: "/stg.jfrog.com"
+  prod: "/jfrog.com"

@@ -1,3 +1,13 @@
 valuesFilePath: values.yml
-include:
-  template: kunal/AiolaHelmTest/1.0.0
+# include:
+#   template: kunal/AiolaHelmTest/1.0.0
+
+pipelines:
+  - name: aiola_test
+    steps:
+      - name: step_1
+        type: Bash
+        configuration:
+          environmentVariables:
+            env1: gitBranch
+        {{ include "pipeline.execution" .Values }}

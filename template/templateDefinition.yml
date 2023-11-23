@@ -17,3 +17,4 @@ pipelines:
         execution:
           onExecute:
             - echo test
+            - echo {{ .Files.Get "test.json" | fromJson }}
